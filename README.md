@@ -175,7 +175,7 @@
                 </div>
                 <h3>Навыки</h3>
                 <p>Python, Linux, Docker, Ansible</p>
-                <a href="#skills">Подробнее</a>
+               
             </div>
             
             <div class="link-card">
@@ -184,7 +184,16 @@
                 </div>
                 <h3>Опыт работы</h3>
                 <p>14+ лет в IT</p>
-                <a href="#experience">Подробнее</a>
+                
+            </div>
+            
+             <div class="link-card">
+                <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>HackerLab</h3>
+                <a href="https://hackerlab.pro/users/DiPan">Написать письмо</a>
+                
             </div>
             
             <div class="link-card">
@@ -193,7 +202,8 @@
                 </div>
                 <h3>Контакты</h3>
                 <p>Свяжитесь со мной</p>
-                <a href="mailto:panchuk6@gmail.com">Написать письмо</a>
+                <p>panch-dima@yandex.ru</p>
+                <a href="mailto:panch-dima@yandex.ru">Написать письмо</a>
             </div>
         </section>
         
