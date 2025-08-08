@@ -192,7 +192,7 @@
                     <i class="fas hat-cowboy"></i>
                 </div>
                 <h3>HackerLab</h3>
-                <a href="https://hackerlab.pro/users/DiPan">Написать письмо</a>
+                <a href="https://hackerlab.pro/users/DiPan">Профиль</a>
                 
             </div>
             
