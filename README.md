@@ -146,7 +146,7 @@
                 <div class="icon">
                     <i class="fab fa-github"></i>
                 </div>
-                <h3>GitHub</h3>
+                <h2>GitHub</h2>
                 <p>Мои проекты и открытый код</p>
                 <a href="https://github.com/PanchukDima" target="_blank">Посетить профиль</a>
             </div>
