@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои профили | Имя Фамилия</title>
+    <title>Панчук Дмитрий | Инженер-программист</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -59,6 +59,7 @@
             text-align: center;
             margin-bottom: 2rem;
             font-size: 1.1rem;
+            padding: 0 1rem;
         }
         
         .links-section {
@@ -113,6 +114,12 @@
             border-top: 1px solid #eee;
             color: #777;
         }
+        
+        .contact-info {
+            text-align: center;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -120,13 +127,19 @@
     <div class="container">
         <header>
             <!-- Замените src на путь к вашему фото -->
-            <img src="profile.jpg" alt="Мое фото" class="profile-img">
-            <h1>Имя Фамилия</h1>
-            <h2 class="subtitle">Должность/Специальность</h2>
+            <img src="profile.jpg" alt="Фото Панчук Дмитрий" class="profile-img">
+            <h1>Панчук Дмитрий Андреевич</h1>
+            <h2 class="subtitle">Инженер-программист (PostgreSQL, Oracle, PL/SQL)</h2>
+            
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> +7 (911) 995-65-49</div>
+                <div><i class="fas fa-envelope"></i> panchuk6@gmail.com</div>
+                <div><i class="fas fa-map-marker-alt"></i> Санкт-Петербург, м. Улица Дыбенко</div>
+            </div>
         </header>
         
         <section class="bio">
-            <p>Краткое описание о себе, своих навыках и опыте. 2-3 предложения, которые заинтересуют работодателя.</p>
+            <p>Опытный инженер-программист с 14+ годами опыта, специализация - работа с базами данных (PostgreSQL, Oracle), миграция и оптимизация SQL-запросов. Эксперт в переносе систем с Oracle на PostgreSQL, разработке хранимых процедур и системной интеграции.</p>
         </section>
         
         <section class="links-section">
@@ -135,17 +148,8 @@
                     <i class="fab fa-github"></i>
                 </div>
                 <h3>GitHub</h3>
-                <p>Мои проекты и вклад в open source</p>
-                <a href="https://github.com/ваш_профиль" target="_blank">Посетить профиль</a>
-            </div>
-            
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-                <h3>LinkedIn</h3>
-                <p>Мое профессиональное резюме</p>
-                <a href="https://linkedin.com/in/ваш_профиль" target="_blank">Посетить профиль</a>
+                <p>Мои проекты и открытый код</p>
+                <a href="https://github.com/PanchukDima" target="_blank">Посетить профиль</a>
             </div>
             
             <div class="link-card">
@@ -153,26 +157,35 @@
                     <i class="fas fa-file-alt"></i>
                 </div>
                 <h3>Резюме</h3>
-                <p>Мое полное резюме в PDF</p>
-                <a href="resume.pdf" target="_blank">Скачать резюме</a>
+                <p>Полная версия моего резюме</p>
+                <a href="resume.pdf" target="_blank">Скачать PDF</a>
             </div>
             
             <div class="link-card">
                 <div class="icon">
-                    <i class="fab fa-codepen"></i>
+                    <i class="fas fa-database"></i>
                 </div>
-                <h3>CodePen</h3>
-                <p>Мои эксперименты с кодом</p>
-                <a href="https://codepen.io/ваш_профиль" target="_blank">Посетить профиль</a>
+                <h3>Опыт с БД</h3>
+                <p>PostgreSQL, Oracle, PL/SQL</p>
+                <a href="#db-skills">Подробнее</a>
             </div>
             
             <div class="link-card">
                 <div class="icon">
-                    <i class="fab fa-stack-overflow"></i>
+                    <i class="fas fa-code"></i>
                 </div>
-                <h3>Stack Overflow</h3>
-                <p>Мои вопросы и ответы</p>
-                <a href="https://stackoverflow.com/users/ваш_профиль" target="_blank">Посетить профиль</a>
+                <h3>Навыки</h3>
+                <p>Python, Linux, Docker, Ansible</p>
+                <a href="#skills">Подробнее</a>
+            </div>
+            
+            <div class="link-card">
+                <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Опыт работы</h3>
+                <p>14+ лет в IT</p>
+                <a href="#experience">Подробнее</a>
             </div>
             
             <div class="link-card">
@@ -181,12 +194,12 @@
                 </div>
                 <h3>Контакты</h3>
                 <p>Свяжитесь со мной</p>
-                <a href="mailto:ваш@email.com">Написать письмо</a>
+                <a href="mailto:panchuk6@gmail.com">Написать письмо</a>
             </div>
         </section>
         
         <footer>
-            <p>&copy; 2023 Имя Фамилия. Все права защищены.</p>
+            <p>&copy; 2025 Панчук Дмитрий Андреевич. Все права защищены.</p>
         </footer>
     </div>
 </body>
