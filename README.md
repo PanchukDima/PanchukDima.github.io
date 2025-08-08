@@ -189,7 +189,7 @@
             
              <div class="link-card">
                 <div class="icon">
-                    <i class="fas fa-briefcase"></i>
+                    <i class="fas hat-cowboy"></i>
                 </div>
                 <h3>HackerLab</h3>
                 <a href="https://hackerlab.pro/users/DiPan">Написать письмо</a>
