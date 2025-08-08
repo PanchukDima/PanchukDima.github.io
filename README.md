@@ -126,7 +126,7 @@
     <div class="container">
         <header>
             <!-- Замените src на путь к вашему фото -->
-            <img src="profile.jpg" alt="Фото Панчук Дмитрий" class="profile-img">
+            <!--<img src="profile.jpg" alt="Фото Панчук Дмитрий" class="profile-img">-->
             <h1>Панчук Дмитрий Андреевич</h1>
             <h2 class="subtitle">Инженер-программист (PostgreSQL, Oracle, PL/SQL)</h2>
             
