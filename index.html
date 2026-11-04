@@ -1,215 +1,209 @@
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Панчук Дмитрий | Инженер-программист</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --background-color: #f9f9f9;
-            --text-color: #333;
-            --light-color: #fff;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        h1 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .subtitle {
-            color: var(--secondary-color);
-            font-weight: normal;
-            margin-top: 0;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--secondary-color);
-            margin: 1rem auto;
-        }
-        
-        .bio {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            padding: 0 1rem;
-        }
-        
-        .links-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .link-card {
-            background: var(--light-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            text-align: center;
-        }
-        
-        .link-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .link-card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        
-        .link-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: var(--secondary-color);
-            color: var(--light-color);
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        
-        .link-card a:hover {
-            background-color: var(--primary-color);
-        }
-        
-        .icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-            color: #777;
-        }
-        
-        .contact-info {
-            text-align: center;
-            margin: 1rem 0;
-            line-height: 1.8;
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Дмитрий Панчук — Senior Software Engineer. Python, PostgreSQL, SQL, оптимизация производительности и автоматизация поставки ПО.">
+  <title>Дмитрий Панчук — Senior Software Engineer</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --surface: #111c2d;
+      --surface-2: #172438;
+      --text: #edf3fb;
+      --muted: #a7b6c9;
+      --line: rgba(181, 202, 228, .15);
+      --accent: #70b7ff;
+      --accent-2: #9bd6c4;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 80% 0%, rgba(55, 112, 171, .18), transparent 36rem),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .topbar { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .02em; }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a { color: var(--muted); font-size: .92rem; text-decoration: none; }
+    nav a:hover { color: var(--text); }
+    .hero { padding: clamp(68px, 11vw, 124px) 0 82px; }
+    .eyebrow { color: var(--accent-2); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 850px; margin: 18px 0 12px; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: 1.02; letter-spacing: -.055em; }
+    .role { color: var(--accent); font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-weight: 600; }
+    .lead { max-width: 760px; margin: 25px 0 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.2rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 10px 18px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; font-weight: 650; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #071321; }
+    section { padding: 62px 0; border-top: 1px solid var(--line); }
+    .section-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 28px; }
+    .section-no { color: var(--accent-2); font: 600 .82rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    h2 { margin: 0; font-size: clamp(1.65rem, 4vw, 2.35rem); letter-spacing: -.035em; }
+    h3 { margin: 0 0 10px; font-size: 1.12rem; }
+    p { margin: 0 0 14px; }
+    .muted { color: var(--muted); }
+    .intro { max-width: 800px; color: var(--muted); font-size: 1.08rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { padding: 24px; background: linear-gradient(145deg, rgba(23,36,56,.92), rgba(17,28,45,.92)); border: 1px solid var(--line); border-radius: 12px; }
+    .card p:last-child { margin-bottom: 0; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .tag { padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; color: #cbd8e8; background: rgba(255,255,255,.025); font-size: .88rem; }
+    .stack-group { display: grid; grid-template-columns: 170px 1fr; gap: 18px; padding: 19px 0; border-bottom: 1px solid var(--line); }
+    .stack-group:last-child { border-bottom: 0; }
+    .stack-group strong { color: var(--accent-2); }
+    .project { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
+    .project + .project { margin-top: 16px; }
+    .project-label { color: var(--accent-2); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .links { display: flex; flex-wrap: wrap; gap: 14px; }
+    .links a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    footer { padding: 28px 0 42px; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 680px) {
+      .wrap { width: min(var(--max), calc(100% - 32px)); }
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero { padding: 64px 0 58px; }
+      section { padding: 48px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .stack-group { grid-template-columns: 1fr; gap: 8px; }
+      .card { padding: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <!-- Замените src на путь к вашему фото -->
-            <!--<img src="profile.jpg" alt="Фото Панчук Дмитрий" class="profile-img">-->
-            <h1>Панчук Дмитрий Андреевич</h1>
-            <h2 class="subtitle">Инженер-программист (PostgreSQL, Oracle, PL/SQL)</h2>
-            
-            <div class="contact-info">
-                <div><i class="fas fa-phone"></i> +7 (911) 995-65-49</div>
-                <div><i class="fas fa-envelope"></i> panchuk6@gmail.com</div>
-                <div><i class="fas fa-map-marker-alt"></i> Санкт-Петербург, м. Проспект Большевиков</div>
-            </div>
-        </header>
-        
-        <section class="bio">
-            <p>Опытный инженер-программист с 14+ годами опыта, специализация - работа с базами данных (PostgreSQL, Oracle), миграция и оптимизация SQL-запросов. Эксперт в переносе систем с Oracle на PostgreSQL, разработке хранимых процедур и системной интеграции.</p>
-        </section>
-        
-        <section class="links-section">
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h2>GitHub</h2>
-                <p>Мои проекты и открытый код</p>
-                <a href="https://github.com/PanchukDima" target="_blank">Посетить профиль</a>
-            </div>
-            
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <h3>Резюме</h3>
-                <p>Полная версия моего резюме</p>
-                <a href="resume.pdf" target="_blank">Скачать PDF</a>
-            </div>
-            
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <h3>Опыт с БД</h3>
-                <p>PostgreSQL, Oracle, PL/SQL</p>
-            </div>
-            
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Навыки</h3>
-                <p>Python, Linux, Docker, Ansible</p>
-               
-            </div>
-            
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <h3>Опыт работы</h3>
-                <p>14+ лет в IT</p>
-                
-            </div>
-            
-             <div class="link-card">
-                <div class="icon">
-                    <i class="fas fa-flag"></i>
-                </div>
-                <h3>HackerLab</h3>
-                <a href="https://hackerlab.pro/users/DiPan">Профиль</a>
-                
-            </div>
-            
-            <div class="link-card">
-                <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Контакты</h3>
-                <p>Свяжитесь со мной</p>
-                <p>panch-dima@yandex.ru</p>
-                <a href="mailto:panch-dima@yandex.ru">Написать письмо</a>
-            </div>
-        </section>
-        
-        <footer>
-            <p>&copy; 2025 Панчук Дмитрий Андреевич. Все права защищены.</p>
-        </footer>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">D. PANCHUK</a>
+      <nav aria-label="Основная навигация">
+        <a href="#about">Обо мне</a>
+        <a href="#expertise">Экспертиза</a>
+        <a href="#projects">Проекты</a>
+        <a href="#stack">Технологии</a>
+        <a href="#contact">Контакты</a>
+      </nav>
     </div>
+  </div>
+
+  <main id="top">
+    <header class="wrap hero">
+      <div class="eyebrow">Software engineering · Backend · Databases</div>
+      <h1>Дмитрий Панчук</h1>
+      <div class="role">Senior Software Engineer / Python Backend Developer</div>
+      <p class="lead">Разрабатываю и сопровождаю корпоративные информационные системы. Основные направления — PostgreSQL, серверная логика на Python и SQL, производительность баз данных, интеграция систем и автоматизация поставки программного обеспечения.</p>
+      <div class="actions">
+        <a class="button primary" href="mailto:panchuk6@gmail.com">Связаться</a>
+        <a class="button" href="https://github.com/PanchukDima" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="button" href="https://hackerlab.pro/users/DiPan" target="_blank" rel="noopener noreferrer">HackerLab</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><span class="section-no">01 /</span><h2>Профессиональный профиль</h2></div>
+        <p class="intro">Работаю на стыке backend-разработки и инженерии баз данных: проектирую серверные компоненты, разбираю узкие места SQL-нагрузки, развиваю хранимую бизнес-логику и обеспечиваю надёжную эксплуатацию приложений. Предпочитаю измеримые улучшения, понятную архитектуру и автоматизируемые процессы.</p>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head"><span class="section-no">02 /</span><h2>Ключевая экспертиза</h2></div>
+        <div class="grid">
+          <article class="card">
+            <h3>PostgreSQL и производительность</h3>
+            <p class="muted">Анализ планов выполнения, оптимизация SQL и PL/pgSQL, исследование нагрузки, настройка и диагностика PostgreSQL.</p>
+          </article>
+          <article class="card">
+            <h3>Backend-разработка</h3>
+            <p class="muted">Разработка серверной логики и компонентов корпоративных систем на Python и SQL, интеграция приложений и внешних сервисов.</p>
+          </article>
+          <article class="card">
+            <h3>Миграция и совместимость</h3>
+            <p class="muted">Практический опыт командной миграции с Oracle на PostgreSQL, адаптации SQL и PL/SQL-подобной логики, проверки корректности и производительности.</p>
+          </article>
+          <article class="card">
+            <h3>Автоматизация эксплуатации</h3>
+            <p class="muted">Контейнеризация, CI/CD, автоматизированное развёртывание, контроль состояния сервисов и сценарии отката при неудачном обновлении.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><span class="section-no">03 /</span><h2>Инженерные задачи и проекты</h2></div>
+        <div class="card">
+          <div class="project">
+            <div>
+              <div class="project-label">Databases</div>
+              <h3>Миграция Oracle → PostgreSQL</h3>
+              <p class="muted">Участие в командном проекте миграции корпоративной системы. Работа с совместимостью SQL и серверной логики, анализом поведения PostgreSQL и техническими ревью.</p>
+            </div>
+          </div>
+          <div class="project">
+            <div>
+              <div class="project-label">Performance engineering</div>
+              <h3>Оптимизация PostgreSQL</h3>
+              <p class="muted">Исследование узких мест на уровне запросов, функций и серверной нагрузки; проверка гипотез с помощью планов выполнения и измерений.</p>
+            </div>
+          </div>
+          <div class="project">
+            <div>
+              <div class="project-label">DevOps automation</div>
+              <h3>Автоматизация развёртывания сервисов</h3>
+              <p class="muted">Построение процесса обновления Docker-сервисов через GitLab CI/CD и Ansible: последовательное развёртывание, healthcheck и автоматический откат при ошибке.</p>
+            </div>
+          </div>
+          <div class="project">
+            <div>
+              <div class="project-label">Robotics & embedded</div>
+              <h3>Робототехника и встроенные системы</h3>
+              <p class="muted">Личные инженерные проекты: ROS 2, управление мобильной платформой, работа с датчиками, электроприводами и микроконтроллерным оборудованием.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <div class="section-head"><span class="section-no">04 /</span><h2>Технологический стек</h2></div>
+        <div class="card">
+          <div class="stack-group"><strong>Backend и языки</strong><div class="tag-list"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/pgSQL</span><span class="tag">C / C++</span></div></div>
+          <div class="stack-group"><strong>Базы данных</strong><div class="tag-list"><span class="tag">PostgreSQL</span><span class="tag">Oracle</span></div></div>
+          <div class="stack-group"><strong>Инфраструктура</strong><div class="tag-list"><span class="tag">Linux</span><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Ansible</span><span class="tag">GitLab CI/CD</span><span class="tag">Git</span></div></div>
+          <div class="stack-group"><strong>Инженерные практики</strong><div class="tag-list"><span class="tag">Database performance</span><span class="tag">System integration</span><span class="tag">Code review</span><span class="tag">Deployment automation</span><span class="tag">Rollback strategies</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><span class="section-no">05 /</span><h2>Контакты и профили</h2></div>
+        <p class="intro">Открыт к обсуждению задач в области backend-разработки, PostgreSQL и производительности корпоративных систем.</p>
+        <div class="links" style="margin-top:22px">
+          <a href="mailto:panchuk6@gmail.com">panchuk6@gmail.com</a>
+          <a href="https://github.com/PanchukDima" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://hackerlab.pro/users/DiPan" target="_blank" rel="noopener noreferrer">HackerLab</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 Дмитрий Панчук</div></footer>
 </body>
 </html>
