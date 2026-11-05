@@ -3,108 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101827">
-  <meta name="description" content="Дмитрий Панчук — Senior Software Engineer. Python, PostgreSQL, SQL, оптимизация производительности и автоматизация поставки ПО.">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Дмитрий Панчук — Senior Software Engineer. PostgreSQL, backend-разработка, оптимизация производительности, Oracle → PostgreSQL и надёжность корпоративных систем.">
+  <meta property="og:title" content="Дмитрий Панчук — Senior Software Engineer">
+  <meta property="og:description" content="PostgreSQL, backend, производительность и надёжность корпоративных систем. Практические инженерные кейсы.">
   <title>Дмитрий Панчук — Senior Software Engineer</title>
   <style>
-    :root {
-      color-scheme: dark;
-      --bg: #0b1220;
-      --surface: #111c2d;
-      --surface-2: #172438;
-      --text: #edf3fb;
-      --muted: #a7b6c9;
-      --line: rgba(181, 202, 228, .15);
-      --accent: #70b7ff;
-      --accent-2: #9bd6c4;
-      --max: 1080px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background:
-        radial-gradient(ellipse at 80% 0%, rgba(55, 112, 171, .18), transparent 36rem),
-        var(--bg);
-      color: var(--text);
-      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: inherit; }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
-    .topbar { padding: 22px 0; border-bottom: 1px solid var(--line); }
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-    .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .02em; }
-    nav { display: flex; flex-wrap: wrap; gap: 22px; }
-    nav a { color: var(--muted); font-size: .92rem; text-decoration: none; }
-    nav a:hover { color: var(--text); }
-    .hero { padding: clamp(68px, 11vw, 124px) 0 82px; }
-    .eyebrow { color: var(--accent-2); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-    h1 { max-width: 850px; margin: 18px 0 12px; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: 1.02; letter-spacing: -.055em; }
-    .role { color: var(--accent); font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-weight: 600; }
-    .lead { max-width: 760px; margin: 25px 0 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.2rem); }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 10px 18px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; font-weight: 650; transition: transform .18s ease, border-color .18s ease, background .18s ease; }
-    .button:hover { transform: translateY(-2px); border-color: var(--accent); }
-    .button.primary { background: var(--accent); border-color: var(--accent); color: #071321; }
-    section { padding: 62px 0; border-top: 1px solid var(--line); }
-    .section-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 28px; }
-    .section-no { color: var(--accent-2); font: 600 .82rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
-    h2 { margin: 0; font-size: clamp(1.65rem, 4vw, 2.35rem); letter-spacing: -.035em; }
-    h3 { margin: 0 0 10px; font-size: 1.12rem; }
-    p { margin: 0 0 14px; }
-    .muted { color: var(--muted); }
-    .intro { max-width: 800px; color: var(--muted); font-size: 1.08rem; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .card { padding: 24px; background: linear-gradient(145deg, rgba(23,36,56,.92), rgba(17,28,45,.92)); border: 1px solid var(--line); border-radius: 12px; }
-    .card p:last-child { margin-bottom: 0; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
-    .tag { padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; color: #cbd8e8; background: rgba(255,255,255,.025); font-size: .88rem; }
-    .stack-group { display: grid; grid-template-columns: 170px 1fr; gap: 18px; padding: 19px 0; border-bottom: 1px solid var(--line); }
-    .stack-group:last-child { border-bottom: 0; }
-    .stack-group strong { color: var(--accent-2); }
-    .project { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
-    .project + .project { margin-top: 16px; }
-    .project-label { color: var(--accent-2); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-    .links { display: flex; flex-wrap: wrap; gap: 14px; }
-    .links a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    footer { padding: 28px 0 42px; color: var(--muted); font-size: .9rem; }
-    @media (max-width: 680px) {
-      .wrap { width: min(var(--max), calc(100% - 32px)); }
-      .topbar-inner { align-items: flex-start; flex-direction: column; }
-      nav { gap: 14px; }
-      .hero { padding: 64px 0 58px; }
-      section { padding: 48px 0; }
-      .grid { grid-template-columns: 1fr; }
-      .stack-group { grid-template-columns: 1fr; gap: 8px; }
-      .card { padding: 20px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-    }
+    :root { color-scheme: dark; --bg:#0b1220; --text:#edf3fb; --muted:#a7b6c9; --line:rgba(181,202,228,.15); --accent:#70b7ff; --accent-2:#9bd6c4; --max:1100px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:24px; }
+    body { margin:0; background:radial-gradient(ellipse at 82% 0%,rgba(55,112,171,.18),transparent 36rem),var(--bg); color:var(--text); font:16px/1.68 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; } a:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+    .wrap { width:min(var(--max),calc(100% - 44px)); margin-inline:auto; }
+    .topbar { position:sticky; top:0; z-index:10; padding:17px 0; border-bottom:1px solid var(--line); background:rgba(11,18,32,.88); backdrop-filter:blur(14px); }
+    .topbar-inner { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { color:var(--text); text-decoration:none; font-weight:750; letter-spacing:.04em; white-space:nowrap; }
+    nav { display:flex; flex-wrap:wrap; gap:19px; } nav a { color:var(--muted); font-size:.9rem; text-decoration:none; } nav a:hover { color:var(--text); }
+    .hero { padding:clamp(66px,10vw,116px) 0 76px; }
+    .eyebrow { color:var(--accent-2); font-size:.76rem; font-weight:750; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { max-width:900px; margin:18px 0 12px; font-size:clamp(2.8rem,7vw,5.6rem); line-height:1.01; letter-spacing:-.06em; }
+    .role { color:var(--accent); font-size:clamp(1.08rem,2.4vw,1.48rem); font-weight:650; }
+    .lead { max-width:850px; margin:24px 0 0; color:var(--muted); font-size:clamp(1.04rem,2vw,1.2rem); }
+    .hero-facts { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:24px; color:var(--muted); font-size:.92rem; }
+    .hero-facts span::before { content:"•"; color:var(--accent-2); margin-right:9px; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:10px 18px; border:1px solid var(--line); border-radius:8px; text-decoration:none; font-weight:680; transition:transform .18s ease,border-color .18s ease,background .18s ease; }
+    .button:hover { transform:translateY(-2px); border-color:var(--accent); } .button.primary { background:var(--accent); border-color:var(--accent); color:#071321; }
+    section { padding:64px 0; border-top:1px solid var(--line); }
+    .section-head { display:flex; align-items:baseline; gap:17px; margin-bottom:27px; }
+    .section-no { color:var(--accent-2); font:650 .82rem/1 ui-monospace,SFMono-Regular,Menlo,monospace; }
+    h2 { margin:0; font-size:clamp(1.65rem,4vw,2.35rem); letter-spacing:-.04em; } h3 { margin:0 0 9px; font-size:1.13rem; line-height:1.35; }
+    p { margin:0 0 14px; } .muted { color:var(--muted); } .intro { max-width:850px; color:var(--muted); font-size:1.08rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card { padding:23px; background:linear-gradient(145deg,rgba(23,36,56,.92),rgba(17,28,45,.92)); border:1px solid var(--line); border-radius:12px; } .card p:last-child { margin-bottom:0; }
+    .case-list { display:grid; gap:16px; }
+    .case { padding:25px 27px; background:linear-gradient(145deg,rgba(23,36,56,.92),rgba(17,28,45,.92)); border:1px solid var(--line); border-radius:12px; }
+    .case-top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; }
+    .case-label { color:var(--accent-2); font-size:.76rem; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
+    .case-impact { color:var(--muted); font-size:.82rem; } .case p { color:var(--muted); } .case p:last-child { margin-bottom:0; } .case strong { color:var(--text); font-weight:650; }
+    .case ul { margin:10px 0 0; padding-left:20px; color:var(--muted); } .case li { margin:5px 0; }
+    .timeline { border-left:1px solid var(--line); margin-left:7px; padding-left:25px; }
+    .timeline-item { position:relative; padding:0 0 25px; } .timeline-item:last-child { padding-bottom:0; }
+    .timeline-item::before { content:""; position:absolute; width:9px; height:9px; border-radius:50%; background:var(--accent); left:-30px; top:9px; box-shadow:0 0 0 5px var(--bg); }
+    .timeline-item h3 { margin-bottom:6px; }
+    .tag-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .tag { padding:5px 9px; border:1px solid var(--line); border-radius:6px; color:#cbd8e8; background:rgba(255,255,255,.025); font-size:.84rem; }
+    .stack-group { display:grid; grid-template-columns:180px 1fr; gap:18px; padding:18px 0; border-bottom:1px solid var(--line); }
+    .stack-group:last-child { border-bottom:0; } .stack-group strong { color:var(--accent-2); }
+    .links { display:flex; flex-wrap:wrap; gap:14px; } .links a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:4px; }
+    footer { padding:28px 0 42px; color:var(--muted); font-size:.9rem; }
+    @media(max-width:720px) { .wrap{width:min(var(--max),calc(100% - 32px));} .topbar{position:static;} .topbar-inner{align-items:flex-start;flex-direction:column;} nav{gap:10px 15px;} .hero{padding:60px 0 56px;} section{padding:48px 0;} .grid{grid-template-columns:1fr;} .stack-group{grid-template-columns:1fr;gap:7px;} .case{padding:20px;} }
+    @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto;} *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;} }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top">D. PANCHUK</a>
-      <nav aria-label="Основная навигация">
-        <a href="#about">Обо мне</a>
-        <a href="#expertise">Экспертиза</a>
-        <a href="#projects">Проекты</a>
-        <a href="#stack">Технологии</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-    </div>
-  </div>
-
+  <div class="topbar"><div class="wrap topbar-inner">
+    <a class="brand" href="#top">D. PANCHUK</a>
+    <nav aria-label="Основная навигация"><a href="#about">Профиль</a><a href="#experience">Опыт</a><a href="#cases">Кейсы</a><a href="#stack">Стек</a><a href="#contact">Контакты</a></nav>
+  </div></div>
   <main id="top">
     <header class="wrap hero">
-      <div class="eyebrow">Software engineering · Backend · Databases</div>
+      <div class="eyebrow">Software engineering · PostgreSQL · Backend</div>
       <h1>Дмитрий Панчук</h1>
-      <div class="role">Senior Software Engineer / Python Backend Developer</div>
-      <p class="lead">Разрабатываю и сопровождаю корпоративные информационные системы. Основные направления — PostgreSQL, серверная логика на Python и SQL, производительность баз данных, интеграция систем и автоматизация поставки программного обеспечения.</p>
+      <div class="role">Senior Software Engineer / Backend & PostgreSQL</div>
+      <p class="lead">Разрабатываю и сопровождаю корпоративные системы, оптимизирую PostgreSQL и расследую сложные проблемы производительности и надёжности. Работаю на стыке backend-разработки, инженерии баз данных и эксплуатации Linux-инфраструктуры.</p>
+      <div class="hero-facts"><span>15+ лет в IT</span><span>PostgreSQL и Oracle</span><span>Backend · Performance · Reliability</span></div>
       <div class="actions">
         <a class="button primary" href="mailto:panchuk6@gmail.com">Связаться</a>
         <a class="button" href="resume.pdf" target="_blank" rel="noopener noreferrer">Скачать резюме PDF</a>
@@ -112,99 +75,90 @@
         <a class="button" href="https://hackerlab.pro/users/DiPan" target="_blank" rel="noopener noreferrer">HackerLab</a>
       </div>
     </header>
-
-    <section id="about">
-      <div class="wrap">
-        <div class="section-head"><span class="section-no">01 /</span><h2>Профессиональный профиль</h2></div>
-        <p class="intro">Работаю на стыке backend-разработки и инженерии баз данных: проектирую серверные компоненты, разбираю узкие места SQL-нагрузки, развиваю хранимую бизнес-логику и обеспечиваю надёжную эксплуатацию приложений. Предпочитаю измеримые улучшения, понятную архитектуру и автоматизируемые процессы.</p>
+    <section id="about"><div class="wrap">
+      <div class="section-head"><span class="section-no">01 /</span><h2>Профессиональный профиль</h2></div>
+      <p class="intro">Мой основной опыт связан с медицинскими информационными системами: интеграционными сервисами, серверной бизнес-логикой и базами данных. Начинал с сопровождения интеграций и Oracle, участвовал в командной миграции на PostgreSQL, затем сфокусировался на оптимизации запросов, работе под нагрузкой и диагностике отказов. В технических решениях стараюсь сначала установить первопричину проблемы, проверить гипотезу и только после этого менять архитектуру или конфигурацию.</p>
+      <div class="grid" style="margin-top:22px">
+        <article class="card"><h3>Что решаю</h3><p class="muted">Медленные запросы и процедуры, нестабильная работа СУБД, проблемы с подключениями и репликацией, ошибки интеграций и сбои серверных приложений.</p></article>
+        <article class="card"><h3>Как работаю</h3><p class="muted">Анализирую планы выполнения, метрики, логи и состояние процессов; использую системные инструменты и отладчик, проверяю технические гипотезы на реальной нагрузке.</p></article>
       </div>
-    </section>
-
-    <section id="expertise">
-      <div class="wrap">
-        <div class="section-head"><span class="section-no">02 /</span><h2>Ключевая экспертиза</h2></div>
-        <div class="grid">
-          <article class="card">
-            <h3>PostgreSQL и производительность</h3>
-            <p class="muted">Анализ планов выполнения, оптимизация SQL и PL/pgSQL, исследование нагрузки, настройка и диагностика PostgreSQL.</p>
-          </article>
-          <article class="card">
-            <h3>Backend-разработка</h3>
-            <p class="muted">Разработка серверной логики и компонентов корпоративных систем на Python и SQL, интеграция приложений и внешних сервисов.</p>
-          </article>
-          <article class="card">
-            <h3>Миграция и совместимость</h3>
-            <p class="muted">Практический опыт командной миграции с Oracle на PostgreSQL, адаптации SQL и PL/SQL-подобной логики, проверки корректности и производительности.</p>
-          </article>
-          <article class="card">
-            <h3>Автоматизация эксплуатации</h3>
-            <p class="muted">Контейнеризация, CI/CD, автоматизированное развёртывание, контроль состояния сервисов и сценарии отката при неудачном обновлении.</p>
-          </article>
-        </div>
+    </div></section>
+    <section id="experience"><div class="wrap">
+      <div class="section-head"><span class="section-no">02 /</span><h2>Опыт</h2></div>
+      <div class="timeline">
+        <div class="timeline-item"><h3>Облачная медицина</h3><p class="muted">Разработка и сопровождение медицинской информационной системы</p><p class="muted">Работаю с интеграционными сервисами, Oracle и PostgreSQL, серверной бизнес-логикой и эксплуатацией. Постепенно расширил область ответственности от сопровождения сервисов и миграции данных до анализа производительности, репликации и диагностики инфраструктурных инцидентов.</p></div>
+        <div class="timeline-item"><h3>Предыдущий опыт</h3><p class="muted">Системное администрирование в медицинской организации</p><p class="muted">Около восьми лет опыта эксплуатации и поддержки IT-инфраструктуры. Этот опыт помогает рассматривать проблемы приложений и баз данных с учётом операционной системы, сети и окружения.</p></div>
       </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrap">
-        <div class="section-head"><span class="section-no">03 /</span><h2>Инженерные задачи и проекты</h2></div>
-        <div class="card">
-          <div class="project">
-            <div>
-              <div class="project-label">Databases</div>
-              <h3>Миграция Oracle → PostgreSQL</h3>
-              <p class="muted">Участие в командном проекте миграции корпоративной системы. Работа с совместимостью SQL и серверной логики, анализом поведения PostgreSQL и техническими ревью.</p>
-            </div>
-          </div>
-          <div class="project">
-            <div>
-              <div class="project-label">Performance engineering</div>
-              <h3>Оптимизация PostgreSQL</h3>
-              <p class="muted">Исследование узких мест на уровне запросов, функций и серверной нагрузки; проверка гипотез с помощью планов выполнения и измерений.</p>
-            </div>
-          </div>
-          <div class="project">
-            <div>
-              <div class="project-label">DevOps automation</div>
-              <h3>Автоматизация развёртывания сервисов</h3>
-              <p class="muted">Построение процесса обновления Docker-сервисов через GitLab CI/CD и Ansible: последовательное развёртывание, healthcheck и автоматический откат при ошибке.</p>
-            </div>
-          </div>
-          <div class="project">
-            <div>
-              <div class="project-label">Robotics & embedded</div>
-              <h3>Робототехника и встроенные системы</h3>
-              <p class="muted">Личные инженерные проекты: ROS 2, управление мобильной платформой, работа с датчиками, электроприводами и микроконтроллерным оборудованием.</p>
-            </div>
-          </div>
-        </div>
+    </div></section>
+    <section id="cases"><div class="wrap">
+      <div class="section-head"><span class="section-no">03 /</span><h2>Инженерные кейсы</h2></div>
+      <div class="case-list">
+        <article class="case">
+          <div class="case-top"><span class="case-label">PostgreSQL · Connection management</span><span class="case-impact">Более 10 000 активных пользователей</span></div>
+          <h3>Стабилизация PostgreSQL в проекте крупного ЦОД</h3>
+          <p>У крупного заказчика — ЦОД Ленинградской области — система обслуживала более 10 000 активных пользователей. При росте нагрузки PostgreSQL начинал испытывать проблемы с производительностью, а первоначальная команда проекта не могла быстро установить причину.</p>
+          <ul><li>Предложил использовать пул соединений PgBouncer и участвовал в адаптации процедур под такую схему работы.</li><li>Когда проблемы сохранились, предложил рассмотреть Odyssey как более подходящий для данной нагрузки пулер.</li><li>На начальном этапе самостоятельно собрал Odyssey из исходников и выполнил настройку; позднее сопровождение этого компонента перешло к другим коллегам.</li></ul>
+          <p><strong>Результат:</strong> после перехода и адаптации системы удалось добиться стабильной работы без прежних периодических замедлений; по текущим наблюдениям система работает стабильно почти год.</p>
+        </article>
+        <article class="case">
+          <div class="case-top"><span class="case-label">PostgreSQL · Replication · WAL</span></div>
+          <h3>Расследование критического отставания реплики</h3>
+          <p>Для выполнения ресурсоёмких отчётов я предложил использовать асинхронные реплики, чтобы разгрузить основной сервер. В дальнейшем одна из реплик начала отставать от мастера более чем на сутки.</p>
+          <ul><li>Самостоятельно проанализировал работу репликации и состояние WAL.</li><li>Выявил влияние длительных клиентских сессий на обработку и удержание WAL, что приводило к проблемам с продвижением реплики.</li><li>Передал результаты анализа команде; были введены ограничения длительности сессий и доработаны процедуры.</li></ul>
+          <p><strong>Результат:</strong> причина проблемы была локализована, после чего появились конкретные меры на уровне сессий и прикладной логики.</p>
+        </article>
+        <article class="case">
+          <div class="case-top"><span class="case-label">Oracle → PostgreSQL · Database migration</span></div>
+          <h3>Командная миграция корпоративной системы с Oracle на PostgreSQL</h3>
+          <p>Вошёл в первоначальную группу из трёх специалистов, которая разбиралась с автоматизированной миграцией и требованиями к исходным Oracle-процедурам.</p>
+          <ul><li>Исследовал поведение инструментария автоматической миграции и особенности преобразования процедур.</li><li>Адаптировал Oracle-процедуры к требованиям мигратора, чтобы повысить успешность переноса.</li><li>После появления первых заказчиков на PostgreSQL поддерживал миграции, разбирал ошибки и участвовал в улучшении процесса.</li></ul>
+          <p><strong>Результат:</strong> получил практический опыт миграции сотен объектов в составе команды, сопровождения полученного решения и устранения проблем совместимости.</p>
+        </article>
+        <article class="case">
+          <div class="case-top"><span class="case-label">PostgreSQL · Debugging · GDB</span></div>
+          <h3>Исследование аварийного завершения PostgreSQL</h3>
+          <p>Столкнулся с дефектом PostgreSQL, связанным с разыменованием NULL и приводившим к аварийному завершению сервера базы данных.</p>
+          <ul><li>Исследовал падение с помощью GDB и анализа дампа памяти после аварии.</li><li>Локализовал проблему и подготовил техническую информацию для разработчиков.</li><li>Сообщил о дефекте в Postgres Pro и upstream PostgreSQL. При этом аналогичное сообщение уже было опубликовано другим исследователем ранее.</li></ul>
+          <p><strong>Результат:</strong> провёл самостоятельное расследование на уровне нативного кода и передал техническую информацию сопровождающим разработчикам. Дефект на момент описания кейса остаётся известным.</p>
+        </article>
+        <article class="case">
+          <div class="case-top"><span class="case-label">Java · Linux · Observability</span></div>
+          <h3>Диагностика остановки приёма соединений HubService</h3>
+          <p>Java-приложение HubService периодически переставало принимать новые соединения. При анализе поведения приложения обнаружил связь инцидента с удалением старых файлов логов.</p>
+          <ul><li>Сопоставил момент прекращения приёма соединений с операцией очистки файлов журналов.</li><li>Перенастроил доставку логов приложения через Grafana Alloy.</li></ul>
+          <p><strong>Результат:</strong> изменил схему сбора логов, чтобы убрать проблемную зависимость от прежнего механизма обработки и удаления файлов.</p>
+        </article>
+        <article class="case">
+          <div class="case-top"><span class="case-label">Application security · Internal initiative</span></div>
+          <h3>Внутреннее тестирование безопасности</h3>
+          <p>По собственной инициативе провожу тестирование безопасности веб-приложений, серверов и других систем компании в рамках внутренней инфраструктуры.</p>
+          <p>Проверяю конфигурации, исследую уязвимости компонентов и возможные векторы компрометации, оцениваю последствия и передаю результаты для устранения рисков. Это дополнительная инженерная активность, а не основная должностная специализация.</p>
+        </article>
       </div>
-    </section>
-
-    <section id="stack">
-      <div class="wrap">
-        <div class="section-head"><span class="section-no">04 /</span><h2>Технологический стек</h2></div>
-        <div class="card">
-          <div class="stack-group"><strong>Backend и языки</strong><div class="tag-list"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/pgSQL</span><span class="tag">C / C++</span></div></div>
-          <div class="stack-group"><strong>Базы данных</strong><div class="tag-list"><span class="tag">PostgreSQL</span><span class="tag">Oracle</span></div></div>
-          <div class="stack-group"><strong>Инфраструктура</strong><div class="tag-list"><span class="tag">Linux</span><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Ansible</span><span class="tag">GitLab CI/CD</span><span class="tag">Git</span></div></div>
-          <div class="stack-group"><strong>Инженерные практики</strong><div class="tag-list"><span class="tag">Database performance</span><span class="tag">System integration</span><span class="tag">Code review</span><span class="tag">Deployment automation</span><span class="tag">Rollback strategies</span></div></div>
-        </div>
+    </div></section>
+    <section id="stack"><div class="wrap">
+      <div class="section-head"><span class="section-no">04 /</span><h2>Технологии и инструменты</h2></div>
+      <div class="card">
+        <div class="stack-group"><strong>Языки и backend</strong><div class="tag-list"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/pgSQL</span><span class="tag">C / C++</span><span class="tag">Java service diagnostics</span></div></div>
+        <div class="stack-group"><strong>Базы данных</strong><div class="tag-list"><span class="tag">PostgreSQL</span><span class="tag">Oracle</span><span class="tag">Query plans</span><span class="tag">Indexes</span><span class="tag">WAL</span><span class="tag">Streaming replication</span></div></div>
+        <div class="stack-group"><strong>Подключения и наблюдаемость</strong><div class="tag-list"><span class="tag">Odyssey</span><span class="tag">PgBouncer</span><span class="tag">Grafana Alloy</span><span class="tag">GDB</span><span class="tag">Core dumps</span></div></div>
+        <div class="stack-group"><strong>Инфраструктура</strong><div class="tag-list"><span class="tag">Linux</span><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Ansible</span><span class="tag">GitLab CI/CD</span><span class="tag">Git</span></div></div>
+        <div class="stack-group"><strong>Практики</strong><div class="tag-list"><span class="tag">Performance analysis</span><span class="tag">System integration</span><span class="tag">Code review</span><span class="tag">Incident investigation</span><span class="tag">Security testing</span></div></div>
       </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <div class="section-head"><span class="section-no">05 /</span><h2>Контакты и профили</h2></div>
-        <p class="intro">Открыт к обсуждению задач в области backend-разработки, PostgreSQL и производительности корпоративных систем.</p>
-        <div class="links" style="margin-top:22px">
-          <a href="mailto:panchuk6@gmail.com">panchuk6@gmail.com</a>
-          <a href="https://github.com/PanchukDima" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://hackerlab.pro/users/DiPan" target="_blank" rel="noopener noreferrer">HackerLab</a>
-        </div>
+    </div></section>
+    <section id="other"><div class="wrap">
+      <div class="section-head"><span class="section-no">05 /</span><h2>Личные инженерные проекты</h2></div>
+      <div class="grid">
+        <article class="card"><h3>Робототехника и ROS 2</h3><p class="muted">Разработка мобильной робототехнической платформы на ROS 2, работа с Raspberry Pi, датчиками, приводами и низкоуровневым управлением.</p></article>
+        <article class="card"><h3>Электроприводы и embedded</h3><p class="muted">Эксперименты с системами управления электроприводами, электроникой и программным обеспечением для встроенных устройств.</p></article>
       </div>
-    </section>
+    </div></section>
+    <section id="contact"><div class="wrap">
+      <div class="section-head"><span class="section-no">06 /</span><h2>Контакты</h2></div>
+      <p class="intro">Интересны задачи в области backend-разработки, PostgreSQL, производительности и надёжности корпоративных систем.</p>
+      <div class="links" style="margin-top:22px"><a href="mailto:panchuk6@gmail.com">panchuk6@gmail.com</a><a href="https://github.com/PanchukDima" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://hackerlab.pro/users/DiPan" target="_blank" rel="noopener noreferrer">HackerLab</a></div>
+    </div></section>
   </main>
-
   <footer><div class="wrap">© 2026 Дмитрий Панчук</div></footer>
 </body>
 </html>
